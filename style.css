@@ -11,6 +11,9 @@ body {
   border: none;
   padding: 0;
   cursor: pointer;
+  transition: filter 600ms;
+  /* Let's make the our button unselectable */
+  user-select: none;
 }
 
 .front {
@@ -49,6 +52,15 @@ body {
     hsl(340deg 100% 32%) 92%,
     hsl(340deg 100% 16%) 100%
   );
+}
+
+.pushable {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pushable:hover {
+  transition: filter 250ms;
+  filter: brightness(110%);
 }
 
 .pushable:hover .front {
